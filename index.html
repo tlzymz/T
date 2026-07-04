@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Night Shift • Para Isabella</title>
+    <meta name="description" content="Uma mensagem especial para Isabella, em formato de Night Shift.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="scanlines" aria-hidden="true"></div>
+<div id="noise" aria-hidden="true"></div>
+<div id="flashlight" aria-hidden="true"></div>
+
+<div id="start-screen">
+    <div class="monitor">
+        <div class="monitor-header">
+            <span>SECURITY SYSTEM</span>
+            <span>12:00 AM</span>
+        </div>
+        <div class="monitor-body">
+            <h1>FREDDY FAZBEAR'S PIZZA</h1>
+            <h2>Night Shift</h2>
+            <p class="subtitle">Uma mensagem importante foi encontrada.</p>
+            <button id="start-btn">▶ LIGAR MONITOR</button>
+        </div>
+    </div>
+</div>
+
+<main id="game" class="hidden">
+    <header>
+        <div class="hud-left">
+            <span class="rec">REC ●</span>
+            <span id="camera-name">CAM 1A</span>
+        </div>
+        <div class="hud-center">
+            <span id="clock" aria-live="polite">12:00 AM</span>
+        </div>
+        <div class="hud-right">
+            <span>POWER</span>
+            <div id="battery"><div id="battery-fill"></div></div>
+            <span id="battery-text" aria-live="polite">100%</span>
+        </div>
+    </header>
+
+    <section id="screen">
+        <div id="eyes" class="hidden" aria-hidden="true"></div>
+        <div id="glitch-layer" aria-hidden="true"></div>
+        <div id="content"></div>
+
+        <div id="bottom-panel">
+            <div class="left-panel">
+                <div class="camera-box">CAM 1A</div>
+                <div class="camera-box">CAM 1B</div>
+                <div class="camera-box">CAM 2A</div>
+                <div class="camera-box">CAM 2B</div>
+            </div>
+            <div class="right-panel">
+                <div class="sport-icons">
+                    <span title="Vôlei">🏐</span>
+                    <span title="Judô">🥋</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button id="prev-btn">◀ Anterior</button>
+            <button id="next-btn">Próxima ▶</button>
+        </div>
+    </section>
+</main>
+
+<div id="end-screen" class="hidden">
+    <div class="monitor end-monitor">
+        <div class="monitor-header">
+            <span>SIGNAL LOST</span>
+            <span>06:00 AM</span>
+        </div>
+        <div class="monitor-body">
+            <h1>CONNECTION LOST...</h1>
+            <h2>But maybe we can reconnect.</h2>
+            <p>Independentemente da resposta, obrigado por ter chegado até aqui.</p>
+            <div class="choice-buttons">
+                <button id="yes-btn">❤️ Sim</button>
+                <button id="no-btn">💔 Não</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="jumpscare" class="hidden" role="alert" aria-live="assertive">
+    <div class="jumpscare-content">
+        <div class="bear" aria-hidden="true">🐻</div>
+        <h1>IT'S ME</h1>
+    </div>
+</div>
+
+<audio id="ambience" loop preload="auto">
+    <source src="ambience.mp3" type="audio/mpeg">
+</audio>
+<audio id="jumpscare-sound" preload="auto">
+    <source src="jumpscare.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
